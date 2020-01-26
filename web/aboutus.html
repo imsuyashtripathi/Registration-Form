@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noteswala</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+        <style>
+            header{
+                background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('images/book2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100vh;
+            }
+            *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            }
+            .body{
+            font-size: 20px;
+            overflow-x:hidden;
+            color: white;
+            font-family: 'Flamenco', cursive;
+            }
+            .clearfix:after{
+            content: ".";
+            visibility: hidden;
+            display: block;
+            height: 0px;
+            clear: both;
+            }
+            .row{
+            max-width: 1180px;
+            margin: 0 auto;
+            }
+            .logo{
+            height: 250px;
+            width: auto;
+            float: left;
+            margin-top: 20px;
+    
+            }
+            .main-nav{
+            float: right;
+            margin-top: 60px;
+            }
+            .main-nav li{
+            display: inline-block;
+            list-style: none;
+            margin-left: 40px;
+            }
+            .main-nav li a{
+            padding: 5px;
+            color:#fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 90%;
+            font-weight: 100;
+            }
+            .main-nav li a:hover{
+            border-bottom: 2px solid #bf55ec;
+            }
+
+            .main-content-header{
+             width: 1180px;
+            position: absolute;
+            top:60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+    
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row clearfix">
+                    <a href="home.html"><img src="images/logo.png" class="logo" alt="home"></a>
+                    <ul class="main-nav">
+                        <li><a href="download.html">DOWNLOADS</a></li>
+                        <li><a href="http://www.uptuonline.com/">PREVIOUS YEAR PAPERS</a></li>
+                        <li><a href="http://www.aktu.ac.in/">CHECK FOR MORE</a></li>
+                        
+                        
+                    </ul>
+                    
+                </div>
+            </nav>
+            <div class="main-content-header">
+                <H1>WELCOME TO <SPAN class="colorchange">NOTESWALA</SPAN>.<BR>
+                 HOUSE OF THE STUDENTS...
+                </H1>
+                
+            </div>
+        </header>
+    </body>
+</html>
