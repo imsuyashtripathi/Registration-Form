@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Search Student Record </title>
+<script type="text/javascript" language="JavaScript" >
+    function checkvalidation(theForm) 
+    {
+        if (theForm.txtrollno.value =="") 
+        {
+            alert("Please enter a value for the \"Roll No.\" field.");
+            theForm.txtrollno.focus();
+            return (false);
+        }
+    }
+</script>
+</head>
+<body>
+<table style="border-style: none; border-color: inherit; border-width: 1; background-color:Orange;height: 22px; width: 967px;">
+<tr align="center">
+<td> <a href="index.html">Registration</a></td>
+<td> <a href="DisplayAllRecord.jsp">Display All Record</a> </td>
+<td> <a href="SearchRecord.htm">Search Record</a></td>
+<td> <a href="UpdateRecord.htm">Update Record</a></td>
+<td> <a href="DeleteRecord.htm">Delete Record</a></td>
+</tr>
+</table>
+<form method="post" action="UpdateRecordDisplay.jsp"  onsubmit="return checkvalidation(this)" name="Form1">
+  <table border="0" cellpadding="0" cellspacing="0"  width="65%" align="center">
+   <tr>
+        <td colspan="3"> <h2 align="center">Update Student Record</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Student Roll No</td>
+         <td><input type="text" name="txtrollno" /></td>
+         <td ><input type="submit" name="submit"  value="search record"/></td>
+         </tr>
+    
+</table> 
+</form>
+</body>
+</html>

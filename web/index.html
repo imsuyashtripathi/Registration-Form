@@ -1,17 +1,303 @@
-<!DOCTYPE html>
-
 <html>
-    <head>
-        <title>Noteswala</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheet.css">
+ <head>
+   <title>REGISTRATION FORM</title>
+   <script language="JavaScript" type="text/javascript">
+    function checkvalidation(theForm) 
+    {
+
+        if (theForm.txtrollno.value == "") {
+            alert("Please enter a value for the \"Roll No.\" field.");
+            theForm.txtrollno.focus();
+            return (false);
+        }
+        if (theForm.txtpassword.value == "") {
+            alert("Please enter a value for the \"Password \" field.");
+            theForm.txtpassword.focus();
+            return (false);
+        }
+        if (theForm.txtname.value == "") {
+            alert("Please enter a value for the \"Student Name\" field.");
+            theForm.txtname.focus();
+            return (false);
+        }
+
+        return (true);
+    }
+</script>
+       <style>
+	    *{
+		    margin:4px;
+			margin-top:0px;
+			padding:2px;
+		  }
+	     #container ul{
+		   list-style:none;
+		   }
+		 #container ul li{
+		   width:250px;;
+		  
+		   height:50px;
+		   line-height:50px;
+		   text-align:center;
+		   float:left;
+		   color:white;
+		   font-size:15px;
+		   position:relative;
+		    background-color:black;
+		   opacity:.6;
+		   }
+		  #container ul li:hover{
+			background-color:green;
+			}
+		
+		body{
+            margin: 0;
+             padding: 0;
+            background: url(pic1.jpg);
+             background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+			}
+			.loginbox{
+    width: 420px;
+    height: 550px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+	  opacity:.8;
+	  margin-top:60px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+	 opacity:.9;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 15px;
+	position:relative;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+	}
+.loginbox select
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color: #fff;
+    font-size: 16px;
+	color:gray;
+}
+.loginbox input[type="radio"]
+{
+	border:none;
+	height:20px;
+	margin-bottom:0px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+	 opacity:.9;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+	text-decoration:bold;
+}
+.loginbox input[type="reset"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+	text-decoration:bold;
+}
+ a{
+    text-decoration:none;
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+
+	   </style>
+ </head>
+ <body>
+    
+	   <div id="container">
+	   <ul>
+	      <li><a href="index.html">Registration</a></li>
+	      <li><a href="DisplayAllRecord.jsp">Display All Record</a></li>
+	      <li><a href="SearchRecord.htm">Search Record</a></li>
+	      <li><a href="UpdateRecord.htm">Update Record</a></li>
+              <li><a href="DeleteRecord.htm">Delete Record</a></li>
+            </ul>
+		</div>
+    <div class="loginbox">
+         <img src="avatar.png" class="avatar">
+            <h1>Registration Form</h1>
+          <form method="post" action="InsertRecord.jsp" onsubmit="return checkvalidation(this)" name="Form1">
+            <p>Roll No.</p>
+            <input type="text" name="txtrollno" placeholder="Enter Rollnumber">
+            <p>Password</p>
+            <input type="password" name="txtpassword" placeholder="Enter Password">
+            <p>Student Name</p>
+            <input type="text" name="txtname" placeholder="Enter Your Name">
+            <p>Branch</p>
+               <select size="1" name="ddlbranch">
+       <option value="Civil Engineering">Civil Engineering</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Electrical & Electronics Engineering">Electrical & Electronics Engineering</option>
+        <option value="Electronics and Communication">Electronics and Communication</option>
+        <option value="Electronics and Instrumentation">Electronics and Instrumentation</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+      </select>
+            <p>Date of Birth</p>
+              <select size="1" name="ddlbdate">
+      <option value="01">1</option>
+        <option value="02">2</option>
+        <option value="03">3</option>
+        <option value="04">4</option>
+        <option value="05">5</option>
+        <option value="06">6</option>
+        <option value="07">7</option>
+        <option value="08">8</option>
+        <option value="09">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>&nbsp;
+      <select size="1" name="ddlbmonth">
+      <option value="01">JANUARY</option>
+        <option value="02">FEBRUARY</option>
+        <option value="03">MARCH</option>
+        <option value="04">APRIL</option>
+        <option value="05">MAY</option>
+        <option value="06">JUNE</option>
+        <option value="07">JULY</option>
+        <option value="08">AUGUST</option>
+        <option value="09">SEPTEMBER</option>
+        <option value="10">OCTOBER</option>
+        <option value="11">NOVEMBER</option>
+        <option value="12">DECEMBER</option>
+      </select>&nbsp;
+      <select size="1" name="ddlbyear">
+      <option value="1970">1970</option>
+        <option value="1971">1971</option>
+        <option value="1972">1972</option>
+        <option value="1973">1973</option>
+        <option value="1974">1974</option>
+        <option value="1975">1975</option>
+        <option value="1976">1976</option>
+        <option value="1977">1977</option>
+        <option value="1978">1978</option>
+        <option value="1979">1979</option>
+        <option value="1980">1980</option>
+        <option value="1981">1981</option>
+        <option value="1982">1982</option>
+        <option value="1983">1983</option>
+        <option value="1984">1984</option>
+        <option value="1985">1985</option>
+        <option value="1986">1986</option>
+        <option value="1987">1987</option>
+        <option value="1988">1988</option>
+        <option value="1989">1989</option>
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+      </select>
+      <p>Gender</p>
+			<select>
+			  <option value="male">MALE</option>
+			  <option value="female">FEMALE</option>
+			  
+			</select>
+            <input type="submit" value="Submit" name="B1"/>
+            <input type="reset" value="reset" name="B2"/><br>
+        </form>
         
-    </head>
-    <body>
-        <div class="loading">
-            <span>Loading....</span>
-        </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+	
+ </body>
 </html>
